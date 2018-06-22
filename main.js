@@ -2,8 +2,9 @@ let isLoading = false;
 let debt = 0;
 
 const beginCalculation = ()=>{
-    if(isLoading) return;
+    if(isLoading || !debt) return;
     
+    document.querySelector('h2').style.opacity = 0;
     let progress = 0;
     const progressBar = document.querySelector('.progress-bar');
     const loadingPhrases = document.getElementById('bsPhrases');
@@ -47,6 +48,11 @@ const calculateHours = () => {
 };
 
 document.querySelector('input').onkeyup = (e)=>{
+    if(e.keyCode === 13){
+        beginCalculation();
+        return;
+    }
+
     debt = e.target.valueAsNumber;
 
     if(debt)
@@ -55,10 +61,4 @@ document.querySelector('input').onkeyup = (e)=>{
         document.querySelector('button').classList.add('disabled');
 };
 
-document.querySelector('button').onclick = ()=>{
-    document.querySelector('h2').style.opacity = 0;
-
-    if(!debt) return;
-
-    beginCalculation();
-};
+document.querySelector('button').onclick = beginCalculation;
