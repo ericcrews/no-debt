@@ -44,7 +44,7 @@ const completeLoading = ()=>{
 };
 
 const calculateHours = () => {
-    return Math.round((debt/2080) + 29);
+    return Math.round(((60000 + debt)/52) * (1/8.77) * .25);
 };
 
 document.querySelector('input').onkeyup = (e)=>{
