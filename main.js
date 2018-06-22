@@ -6,11 +6,17 @@ const beginCalculation = ()=>{
     
     let progress = 0;
     const progressBar = document.querySelector('.progress-bar');
+    const loadingPhrases = document.getElementById('bsPhrases');
     document.querySelector('button').classList.add('disabled');
 
     isLoading = true;
 
     const intervalId = setInterval(()=>{
+        if(progress%20 == 0)
+        {
+            loadingPhrases.innerText = loading_phrase();
+        }
+
         if(progress >= 100){
             clearInterval(intervalId);
             setTimeout(()=>{
@@ -25,11 +31,12 @@ const beginCalculation = ()=>{
             progressBar.style.width = progress + "%";
         }
         
-    }, 100);
+    }, 150);
 };
 
 const completeLoading = ()=>{
     isLoading = false;
+    document.getElementById('bsPhrases').innerText = '';
     document.querySelector('button').classList.remove('disabled');
     document.querySelector('h2').style.opacity = 1;
     document.getElementById('resultHours').innerText = calculateHours();

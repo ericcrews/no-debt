@@ -12,25 +12,29 @@
 </head>
 <body>
     <div id="container">
-    <div id="inputContainer">
-        <div id="input" class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">$</span>
+        <img src="McDonalds logo.png" alt="I'm lovin' it"/>
+        <h3>How much do you have to work at McDonald's&reg; to pay off your student debt?</h3>
+        <div id="inputContainer">
+            <div id="input" class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                </div>
+                <input type="number" class="form-control" placeholder="Enter your debt here">
+                <div class="input-group-append">
+                    <button class="btn btn-primary disabled" type="button">Go</button>
+                </div>
             </div>
-            <input type="number" class="form-control" placeholder="Enter your debt here">
-            <div class="input-group-append">
-                <button class="btn btn-primary disabled" type="button">Go</button>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
+            <p id="bsPhrases"></p>
         </div>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-    </div>
-    <h2>
-            <span>You will have to work at McDonalds&reg; for</span> <span id="resultHours"></span> <span>hours per week to cover living expenses and pay off your debt in 4 years. I'm Lovin' It.&trade;</span>
+        <h2>
+            <span>You will have to work at McDonald's&reg; for</span> <span id="resultHours"></span> <span>hours per week to cover living expenses and pay off your debt in 4 years. I'm Lovin' It.&trade;</span>
         </h2>
     </div>
 
+    <script src="tech_bs_generator.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

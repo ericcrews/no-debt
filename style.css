@@ -23,6 +23,13 @@ body{
     margin-bottom: 5px !important;
 }
 
+h3{
+    width: 30%;
+    display: block;
+    margin: 0 auto 5px auto;
+    text-align: center;
+}
+
 h2{
     width: 50%;
     display: block;
@@ -36,4 +43,10 @@ h2{
     -moz-transition: opacity 1s ease-in-out;
     -ms-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
+}
+
+img{
+    display: block;
+    width: 20%;
+    margin: 0 auto 10px auto;
 }
