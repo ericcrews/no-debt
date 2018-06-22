@@ -189,7 +189,7 @@ const loading_phrase = () => {
         return Math.floor(Math.random() * upper);
     };
 
-    const verb = ingify(verbs[random_int(verbs.length)]);
+    const verb = ingify(verbs[random_int(verbs.length)]).replace(/^\w/, c => c.toUpperCase());
     const adjective = adjectives[random_int(adjectives.length)];
     const noun = nouns[random_int(nouns.length)];
 
