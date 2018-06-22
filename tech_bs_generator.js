@@ -1,4 +1,4 @@
-verbs = [
+const verbs = [
     'aggregate',
     'architect',
     'benchmark',
@@ -62,7 +62,7 @@ verbs = [
     'whiteboard',
 ];
 
-adjectives = [
+const adjectives = [
     '24/365',
     '24/7',
     'B2B',
@@ -130,7 +130,7 @@ adjectives = [
     'world-class',
 ];
 
-nouns = [
+const nouns = [
     'action-items',
     'applications',
     'architectures',
@@ -182,16 +182,16 @@ nouns = [
 
 const loading_phrase = () => {
     const ingify = verb => {
-        return (verb.slice(-1) === 'e' ? verb(0, -1) : verb) + 'ing';
+        return (verb.slice(-1) === 'e' ? verb.slice(0, -1) : verb) + 'ing';
     };
 	
     const random_int = upper => {
         return Math.floor(Math.random() * upper);
     };
 
-    verb = ingify(verbs[random_int(verbs.length)]);
-    adjective = adjectives[random_int(adjectives.length)];
-    noun = nouns[random_int(nouns.length)];
+    const verb = ingify(verbs[random_int(verbs.length)]);
+    const adjective = adjectives[random_int(adjectives.length)];
+    const noun = nouns[random_int(nouns.length)];
 
     return `${verb} ${adjective} ${noun}...`; 
 };
