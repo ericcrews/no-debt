@@ -4,12 +4,36 @@ html, body{
 
 body{
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    font-size: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.progress{
+#container{
     width: 100%;
+    display: inline-block;
+}
+
+#inputContainer{
+    width: 30%;
+    margin: 0 auto;
+}
+
+#input{
+    margin-bottom: 5px !important;
+}
+
+h2{
+    width: 50%;
+    display: block;
+    margin: 1em auto 0 auto !important;
+    text-align: center;
+
+    opacity: 0;
+
+    transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
 }
